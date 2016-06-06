@@ -4,6 +4,11 @@ $('#submit').click(function(){
 	 $('#save').toggle();
 
 
+	 if( $("#inspectorName").val() !== ""){
+			$("#inspector").html( $("#inspectorName").val());
+	}
+
+
 	if($('#checkbox-1').prop('checked')) {
 		$("#task1status").find('div').eq(0).removeClass('hidden');
 	    
@@ -76,10 +81,6 @@ $('#submit').click(function(){
 
 });//end Submit
 
-// $("#save").click(function(){
-// 	window.print();
-// });
-
  $('#save').click(function(){
     html2canvas($('#report'), 
     {
@@ -93,7 +94,6 @@ $('#submit').click(function(){
       background: '#fff',
     });
   });
-
 
 
 
