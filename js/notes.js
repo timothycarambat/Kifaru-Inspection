@@ -1,0 +1,18 @@
+ $('#more1').click(function(){
+		$("#notes1").toggle(200);
+});
+  $('#more2').click(function(){
+		$("#notes2").toggle(200);
+});
+   $('#more3').click(function(){
+		$("#notes3").toggle(200);
+});
+   $('#more4').click(function(){
+		$("#notes4").toggle(200);
+});
+   $('#more5').click(function(){
+		$("#notes5").toggle(200);
+});
+   $('#more6').click(function(){
+		$("#notes6").toggle(200);
+});

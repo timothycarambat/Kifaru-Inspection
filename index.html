@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kifaru Inspection</title>
+<!-- CSS -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"> 
+<link href="css/Custom.css" rel="stylesheet" type="text/css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+<div id="form">
+    <form>
+    <h1>Kifaru Inspection Report</h1>
+      <div class="form-group">
+        <label for="inspectorName">Inspector Name</label>
+        <input type="text" class="form-control" id="inspectorName" placeholder="Your Name Here">
+      </div>
+
+      <div>
+            <span>
+            <input id="checkbox-1" class="checkbox-custom " name="checkbox-1" type="checkbox">
+            <label for="checkbox-1" class="checkbox-custom-label">External Inspection of Hull and Body</label>
+            <div id="more1" class="glyphicon glyphicon-plus" style="color:#0275d8"></div></span>
+
+                <div class="form-group additional-notes" id="notes1">
+                  <label for="Additional-1">Additonal Notes:</label>
+                  <input type="text" class="form-control" id="notebox1" placeholder="Additional Notes">
+                </div>
+      </div>
+
+      <div>
+            <span>
+            <input id="checkbox-2" class="checkbox-custom " name="checkbox-2" type="checkbox">
+            <label for="checkbox-2" class="checkbox-custom-label">Interior Inspection of rooms for leaks, damages or other issues</label>
+            <div id="more2" class="glyphicon glyphicon-plus" style="color:#0275d8"></div></span>
+
+                <div class="form-group additional-notes" id="notes2">
+                  <label for="Additional-2">Additonal Notes:</label>
+                  <input type="text" class="form-control" id="notebox2" placeholder="Additional Notes">
+                </div>
+      </div>
+
+      <div>
+            <span>
+            <input id="checkbox-3" class="checkbox-custom " name="checkbox-3" type="checkbox">
+            <label for="checkbox-3" class="checkbox-custom-label">Inspection of Ropes and Bumpers</label>
+            <div id="more3" class="glyphicon glyphicon-plus" style="color:#0275d8"></div></span>
+
+                <div class="form-group additional-notes" id="notes3">
+                  <label for="Additional-3">Additonal Notes:</label>
+                  <input type="text" class="form-control" id="notebox3" placeholder="Additional Notes">
+                </div>
+      </div>
+
+      <div>
+            <span>
+            <input id="checkbox-4" class="checkbox-custom " name="checkbox-4" type="checkbox">
+            <label for="checkbox-4" class="checkbox-custom-label">Operate AC in Veranda, Kitchen, and Pilot House</label>
+            <div id="more4" class="glyphicon glyphicon-plus" style="color:#0275d8"></div></span>
+
+                <div class="form-group additional-notes" id="notes4">
+                  <label for="Additional-4">Additonal Notes:</label>
+                  <input type="text" class="form-control" id="notebox4" placeholder="Additional Notes">
+                </div>
+      </div>
+
+      <div>
+            <span>
+            <input id="checkbox-5" class="checkbox-custom " name="checkbox-5" type="checkbox">
+            <label for="checkbox-5" class="checkbox-custom-label">Ensure lower decks has adequate air circulation</label>
+            <div id="more5" class="glyphicon glyphicon-plus" style="color:#0275d8"></div></span>
+
+                <div class="form-group additional-notes" id="notes5">
+                  <label for="Additional-5">Additonal Notes:</label>
+                  <input type="text" class="form-control" id="notebox5" placeholder="Additional Notes">
+                </div>
+      </div>
+
+      <div>
+            <span>
+            <input id="checkbox-6" class="checkbox-custom " name="checkbox-6" type="checkbox">
+            <label for="checkbox-6" class="checkbox-custom-label">Remove any standing water from deck surfaces</label>
+            <div id="more6" class="glyphicon glyphicon-plus" style="color:#0275d8"></div></span>
+
+                <div class="form-group additional-notes" id="notes6">
+                  <label for="Additional-6">Additonal Notes:</label>
+                  <input type="text" class="form-control" id="notebox6" placeholder="Additional Notes">
+                </div>
+      </div>
+
+      <div  id="submit" class="btn btn-default">Submit</div>
+    </form>
+</div>
+
+</div> <!-- End of form HTML -->
+
+<div id="report">
+        <div class="row">
+          <div class="col-md-6"><div style="display:inline-block"> <img src="Logo.png" width="150px" height="130px"  style="display:inline-block;"> <h1 style="margin-left:10px; display:inline-block;">Kifaru Inspection Report</h1></div> </div>
+
+          <div class="col-md-4">
+            <div class="date-box" style="display:inline-block"> 
+                    <div class="date-val">
+                    <h1 style="display:inline-block">Date:</h1>
+                    <h2 id="currentDate" style="display:inline-block; padding-left:20px;"></h2>
+                    </div>
+            </div>  
+          </div>
+        </div>
+
+
+        <div style="margin-left:10px;">
+          <h2>Status</h2>
+          <p>The table below is a simple outline of tasks and status</p>            
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width:100px;">Task</th>
+                <th style="width:50px;">Status</th>
+                <th style="width:200px;">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                      <td>External Inspection of Hull and Body</td>
+                      <td id="task1status"> <div class="glyphicon glyphicon-ok hidden" style="color:#5cb85c"></div>   <div class="glyphicon glyphicon-remove hidden" style="color:#c9302c"></div></td>
+                      <td id="task1notes"> <b>N/A</b> </td>
+                    </tr>
+
+                    <tr>
+                      <td>Interior Inspection of rooms for leaks, damages or other issues</td>
+                      <td id="task2status"> <div class="glyphicon glyphicon-ok hidden" style="color:#5cb85c"></div>   <div class="glyphicon glyphicon-remove hidden" style="color:#c9302c"></div></td>
+                      <td id="task2notes"> <b>N/A</b> </td>
+                    </tr>
+
+                    <tr>
+                      <td>Inspection of Ropes and Bumpers</td>
+                      <td id="task3status"> <div class="glyphicon glyphicon-ok hidden" style="color:#5cb85c"></div>   <div class="glyphicon glyphicon-remove hidden" style="color:#c9302c"></div></td>
+                      <td id="task3notes"> <b>N/A</b> </td>
+                    </tr>
+
+                    <tr>
+                      <td>Operate AC in Veranda, Kitchen, and Pilot House</td>
+                      <td id="task4status"> <div class="glyphicon glyphicon-ok hidden" style="color:#5cb85c"></div>   <div class="glyphicon glyphicon-remove hidden" style="color:#c9302c"></div></td>
+                      <td id="task4notes"> <b>N/A</b> </td>
+                    </tr>
+
+                    <tr>
+                      <td>Ensure lower decks has adequate air circulation</td>
+                      <td id="task5status"> <div class="glyphicon glyphicon-ok hidden" style="color:#5cb85c"></div>   <div class="glyphicon glyphicon-remove hidden" style="color:#c9302c"></div></td>
+                      <td id="task5notes"> <b>N/A</b> </td>
+                    </tr>
+
+                    <tr>
+                      <td>Remove any standing water from deck surfaces</td>
+                      <td id="task6status"> <div class="glyphicon glyphicon-ok hidden" style="color:#5cb85c"></div>   <div class="glyphicon glyphicon-remove hidden" style="color:#c9302c"></div></td>
+                      <td id="task6notes"> <b>N/A</b> </td>
+                    </tr>
+            </tbody>
+          </table>
+        </div>
+</div>
+<div id="save" class="btn btn-default">Save</div>
+
+<script type="text/javascript" src="js/notes.js"></script>
+<script type="text/javascript" src="js/reporter.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+</body>
+</html>
